@@ -14,7 +14,7 @@
         <h1>ST JOSEPH COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
         <h2>Student Registration From</h2>
         <div class="form-wrapper">
-            <form action="">
+            <form action="data_insertion.php" method="POST" enctype="multipart/form-data">
                 <div class="form-item">
                     <label for="fullname">Student Image:</label>
                     <input type="file" name="studentimage" id="studentimage" required>
@@ -31,7 +31,7 @@
                 <div class="form-item">
                     <label for="gender">Gender:</label>
                     <div class="genders">
-                        <p>Male</p> <input type="radio" name="gender" id="gender" value="male" required>
+                        <p>Male</p> <input type="radio" name="gender" id="gender" value="male">
                         <p>Female</p> <input type="radio" name="gender" id="gender" value="female">
                         <p>Other</p> <input type="radio" name="gender" id="gender" value="other">
                     </div>
@@ -41,7 +41,7 @@
                     <input type="text" name="admission" id="admission" placeholder="admission no." required>
                 </div>
                 <div class="form-item">
-                    <label for="email">Date of Birth</label>
+                    <label for="DOB">Date of Birth</label>
                     <input type="date" name="DOB" id="DOB" required>
                 </div>
                 <div class="form-item">
@@ -50,25 +50,25 @@
                 </div>
                 <div class="form-item">
                     <label for="fees">Fees:</label>
-                    <input type="text" name="fees" id="fees" placeholder="fees" >
+                    <input type="text" name="fees" id="fees" placeholder="fees" required>
                 </div>
                 <div class="form-item">
-                    <label for="level">Course:</label>
+                    <label for="level">Program:</label>
                     <select name="level" id="level">
-                        <option value="highschool">B Tech</option>
-                        <option value="highschool">M Tech </option>
-                       
+                        <option value="BTech">B Tech</option>
+                        <option value="Mtech">M Tech </option>
+
                     </select>
                 </div>
                 <div class="form-item">
-                    <label for="department">Department:</label>
-                    <select name="department" id="department">
-                        <option value="electrical">Computer Engineering</option>
-                        <option value="electrical">Mechanical Engineering</option>
-                        <option value="electrical">Civil Engineering</option>
-                        <option value="electrical">Artificial Intelligence and Data Science</option>
-                        <option value="electrical">Electronics Engineering</option>
-                        <option value="electrical">Electrical Engineering</option>
+                    <label for="department" >Department:</label>
+                    <select name="department" id="department" required>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                        <option value="Electronics Engineering">Electronics Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
                     </select>
                 </div>
 
@@ -80,29 +80,29 @@
                 <h3>Grade</h3>
                 <div class="form-item">
                     <label for="gt">Graph Theory</label>
-                    <input type="text" name="gt" id="gt"  >
+                    <input type="text" name="gt" id="gt" required>
                 </div>
                 <div class="form-item">
                     <label for="os">Operating System</label>
-                    <input type="text" name="os" id="os">
+                    <input type="text" name="os" id="os" required>
                 </div>
                 <div class="form-item">
                     <label for="dbms">Database Management System</label>
-                    <input type="text" name="dbms" id="dbms">
+                    <input type="text" name="dbms" id="dbms" required>
                 </div>
                 <p></p>
                 <div class="form-item">
                     <label for="coa">Computer Organization and Architecture</label>
-                    <input type="text" name="coa" id="coa">
+                    <input type="text" name="coa" id="coa" required>
                 </div>
                 <p></p>
                 <div class="form-item">
                     <label for="pe">Professional Ethic</label>
-                    <input type="text" name="pe" id="pe">
+                    <input type="text" name="pe" id="pe" required> 
                 </div>
                 <div class="form-item">
                     <label for="coi">Constitution of India</label>
-                    <input type="text" name="coi" id="coi">
+                    <input type="text" name="coi" id="coi" required>
                 </div>
                 <hr>
                 <h3>Permanent Address</h3>
@@ -128,16 +128,13 @@
                 </div>
                 <hr>
                 <h3>Temporary Address</h3>
-                <div class="same-perm">
-                    <label for="sameaspermanent">Same as Permanent Address:</label> <input type="checkbox" name="sameaspermanent" id="sameaspermanent">
-                </div>
                 <div class="form-item">
                     <label for="tstate">State:</label>
                     <input type="text" name="tstate" id="tstate" placeholder="State" required>
                 </div>
                 <div class="form-item">
                     <label for="pDistrict">District:</label>
-                    <input type="text" name="pDistrict" id="pDistrict" placeholder="District" required>
+                    <input type="text" name="tDistrict" id="tDistrict" placeholder="District" required>
                 </div>
                 <div class="form-item">
                     <label for="tcity">City:</label>
@@ -152,7 +149,13 @@
                     <input type="tel" name="tphonenumber" id="tphonenumber" placeholder="XXX XXX XXXX" required>
                 </div>
 
-                <button class="register" type="submit">Submit</button>
+                <button class="register" type="submit" name="submit">Submit</button>
+
+                <!---- Including PHP File Here ---->
+                <?php
+                include "data_insertion.php";
+                ?>
+
             </form>
         </div>
 
