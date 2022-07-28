@@ -16,6 +16,9 @@ if($_POST)
      echo "Your password is: ";
      echo $row['password'];
     }
+     else{
+      echo "Invalid email";
+    }
     
 }
 
