@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     //here username and password from database
     $result=mysqli_query($data,$sql);//checking whether they mathch to the db
     $row=mysqli_fetch_array($result);
-    if($row["role"]=="admin"){
+    if(isset($row['role'])=="admin"){
         header("location:main.php");//change with the details page later
     }
     else{
