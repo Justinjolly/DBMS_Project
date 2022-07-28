@@ -3,7 +3,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$db="sms_project";
+$db="project";
 $data=mysqli_connect($host,$user,$password,$db); //connected to database 
 
 if($data==false){  //check connection
@@ -21,10 +21,14 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
     $result=mysqli_query($data,$sql);//checking whether they mathch to the db
     $row=mysqli_fetch_array($result);
     if(isset($row['role'])=="admin"){
-        header("location:main.php");//change with the details page later
+        header("location:main.html");//change with the details page later
     }
     else{
-        echo "USERNAME OR PASSWORD IS WRONG";
+        echo '<script type ="text/JavaScript">';  
+      echo 'alert("Invalid username or password")';  
+      echo '</script>';  
+    
     }
+    echo "<script> location.href='index.html'; </script>";
 }
 ?>
