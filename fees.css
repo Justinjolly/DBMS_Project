@@ -1,0 +1,26 @@
+html {
+    background: rgba(253, 253, 253, 0.479);
+}
+.form-item select {
+    margin: 5px 0px;
+    width: max-content;
+}
+.form-item input {
+    margin: 5px 15px;
+    height: 22px;
+    width: 15%;
+    font-size: 13px;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+.register {
+    margin: 15px;
+    background: #db364f;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 7px 20px;
+    border-radius: 3px;
+    color: #fbfbfb;
+    border: 0;
+    cursor: pointer;
+}
