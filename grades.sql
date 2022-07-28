@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2022 at 12:17 PM
+-- Generation Time: Jul 28, 2022 at 06:02 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -37,14 +37,6 @@ CREATE TABLE `grades` (
   `professional_ethic` varchar(3) NOT NULL,
   `constitution_of_india` int(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `grades`
---
-
-INSERT INTO `grades` (`grade_id`, `adm_no`, `graph_theory`, `operating_system`, `database_management_system`, `computer_organization_and_architecture`, `professional_ethic`, `constitution_of_india`) VALUES
-(1, '20cs077', '0', '0', '0', '0', '0', 0),
-(2, '20cs070', 'A', 'S', 'B', 'S', 'A', 0);
 
 --
 -- Indexes for dumped tables
