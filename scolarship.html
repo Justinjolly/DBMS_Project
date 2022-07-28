@@ -19,7 +19,7 @@
     <div class="container">
         <h2>Scholarship From</h2>
         <div class="form-wrapper">
-            <form action="">
+            <form action="scholarships.php" method="POST" enctype="multipart/form-data">
                 <div class="form-item">
                     <label for="fullname">Student Name:</label>
                     <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
@@ -38,6 +38,7 @@
                     <div class="form-item">
                         <label for="Category">If yes,Select Category:</label>
                         <select name="Category" id="Category">
+                            <option value="No scholarship">No scholarship</option>
                             <option value="Category 1">Category 1</option>
                             <option value="Category 2">Category 2</option>
                             <option value="Category 3">Category 3</option>
