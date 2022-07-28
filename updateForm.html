@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>ST JOSEPH COLLEGE OF ENGINEERING AND TECHNOLOGY</h1>
+        <h2>Student Data Update From</h2>
+        <div class="form-wrapper">
+            <form action="update.php" method="POST">
+                <div class="form-item">
+                    <label for="fullname">Student Name:</label>
+                    <input type="text" name="fullname" id="fullname" placeholder="Full Name" required>
+                </div>
+                <div class="form-item">
+                    <label for="username">parent Name:</label>
+                    <input type="text" name="username" id="fathersname" placeholder="Father's Full Name" required>
+                </div>
+                <div class="form-item">
+                    <label for="gender" >Gender:</label>
+                    <div class="genders" >
+                        <p>Male</p> <input type="radio" name="gender" id="gender" value="male" required >
+                        <p>Female</p> <input type="radio" name="gender" id="gender" value="female">
+                        <p>Other</p> <input type="radio" name="gender" id="gender" value="other">
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label for="admission">Admission Number:</label>
+                    <input type="text" name="admission" id="admission" placeholder="admission no." required>
+                </div>
+                <div class="form-item">
+                    <label for="DOB">Date of Birth</label>
+                    <input type="date" name="DOB" id="DOB" required>
+                </div>
+                <div class="form-item">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="email@xyz.com" required>
+                </div>
+                <div class="form-item">
+                    <label for="fees">Fees:</label>
+                    <input type="text" name="fees" id="fees" placeholder="fees" required>
+                </div>
+                <div class="form-item">
+                    <label for="level">Program:</label>
+                    <select name="level" id="level">
+                        <option value="BTech">B Tech</option>
+                        <option value="Mtech">M Tech </option>
+
+                    </select>
+                </div>
+                <div class="form-item">
+                    <label for="department" >Department:</label>
+                    <select name="department" id="department" required>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="Mechanical Engineering">Mechanical Engineering</option>
+                        <option value="Civil Engineering">Civil Engineering</option>
+                        <option value="Artificial Intelligence and Data Science">Artificial Intelligence and Data Science</option>
+                        <option value="Electronics Engineering">Electronics Engineering</option>
+                        <option value="Electrical Engineering">Electrical Engineering</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label for="phonenumber">Tel/Mobile:</label>
+                    <input type="tel" name="phonenumber" id="phonenumber" placeholder="XXX XXX XXXX" required>
+                </div>
+                <hr>
+                <h3>Permanent Address</h3>
+                <div class="form-item">
+                    <label for="pstate">State:</label>
+                    <input type="text" name="pstate" id="pstate" placeholder="State" required>
+                </div>
+                <div class="form-item">
+                    <label for="pDistrict">District:</label>
+                    <input type="text" name="pDistrict" id="pDistrict" placeholder="District" required>
+                </div>
+                <div class="form-item">
+                    <label for="pcity">City:</label>
+                    <input type="text" name="pcity" id="pcity" placeholder="City" required>
+                </div>
+                <div class="form-item">
+                    <label for="pzip">Pin Code:</label>
+                    <input type="number" name="pzip" id="pzip" placeholder="Pin Code" required>
+                </div>
+                <div class="form-item">
+                    <label for="pphonenumber">Tel/Mobile:</label>
+                    <input type="tel" name="pphonenumber" id="pphonenumber" placeholder="XXX XXX XXXX" required>
+                </div>
+                <hr>
+                <h3>Temporary Address</h3>
+                <div class="form-item">
+                    <label for="tstate">State:</label>
+                    <input type="text" name="tstate" id="tstate" placeholder="State" required>
+                </div>
+                <div class="form-item">
+                    <label for="pDistrict">District:</label>
+                    <input type="text" name="tDistrict" id="tDistrict" placeholder="District" required>
+                </div>
+                <div class="form-item">
+                    <label for="tcity">City:</label>
+                    <input type="text" name="tcity" id="tcity" placeholder="City" required>
+                </div>
+                <div class="form-item">
+                    <label for="tzip">Pin Code:</label>
+                    <input type="number" name="tzip" id="tzip" placeholder="Pin Code" required>
+                </div>
+                <div class="form-item">
+                    <label for="tphonenumber">Tel/Mobile:</label>
+                    <input type="tel" name="tphonenumber" id="tphonenumber" placeholder="XXX XXX XXXX" required>
+                </div>
+
+                <button class="register" type="submit" name="submit">Update</button>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
