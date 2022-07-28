@@ -32,6 +32,21 @@
       <link rel="stylesheet" href="css/demo.css" />
     
       <link rel="stylesheet" href="css/style.css">
+
+      <style>
+        .dropdown_show{
+            margin-left: 20px;
+
+        }
+        #dropdownMenuLink{
+            border-radius: 5px;
+            width: 150px;
+            
+        }
+        
+
+
+      </style>
   </head>
 
   <body>
@@ -196,6 +211,25 @@
                                       <span class="pcoded-mcaret"></span>
                                   </a>
                               </li>
+
+
+                              <br>
+
+
+                              <!-- Display -->
+                              <li class="display">
+                                <div class="dropdown_show">
+                                    <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                       View
+                                    </a>
+                            
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                   <a class="dropdown-item" href="view_personal_details.php">Students</a>
+                                   <a class="dropdown-item" href="view_fees.php">Fee Details</a>
+                                   <a class="dropdown-item" href="view_scholarship.php">Scholarship Details</a>
+                                   </div>
+                                </div>
+                            </li>
                               <li class="pcoded-hasmenu">
                                   <a href="javascript:void(0)" class="waves-effect waves-dark">
                                       <span class="pcoded-micon"><i class="ti-layout-grid2-alt"></i></span>
@@ -231,28 +265,17 @@
                                               <span class="pcoded-mcaret"></span>
                                           </a>
                                       </li>
-                                   <li class=" ">
-                                        <a href="grade.html" class="waves-effect waves-dark">
-                                            <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Grade</span>
-                                            <span class="pcoded-mcaret"></span>
-                                        </a>
-                                    </li>
                                       <li class=" ">
                                         <a href="updateForm.html" class="waves-effect waves-dark">
                                             <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Update Personal Details</span>
+                                            <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Update</span>
                                             <span class="pcoded-mcaret"></span>
                                         </a>
-                                    </li>
-                                </li>
-                                <li class=" ">
-                                  <a href="grade.html" class="waves-effect waves-dark">
-                                      <span class="pcoded-micon"><i class="ti-angle-right"></i></span>
-                                      <span class="pcoded-mtext" data-i18n="nav.basic-components.breadcrumbs">Update Grade</span>
-                                      <span class="pcoded-mcaret"></span>
-                                  </a>
+                                      </li>
+                                    </ul>
                               </li>
+                          </ul>
+                          </div>
                   </nav>
                   <div class="pcoded-content">
                       <!-- Page-header start -->
