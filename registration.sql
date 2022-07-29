@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2022 at 07:12 PM
+-- Generation Time: Jul 28, 2022 at 06:05 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -34,16 +34,9 @@ CREATE TABLE `registration` (
   `admissonNo` varchar(10) NOT NULL,
   `dob` date NOT NULL,
   `email` varchar(35) NOT NULL,
-  `fees` int(8) NOT NULL,
   `program` varchar(30) NOT NULL,
   `department` varchar(30) NOT NULL,
   `contact` varchar(15) NOT NULL,
-  `gt` varchar(2) NOT NULL,
-  `os` varchar(2) NOT NULL,
-  `dbms` varchar(2) NOT NULL,
-  `coa` varchar(2) NOT NULL,
-  `pe` varchar(2) NOT NULL,
-  `coi` varchar(2) NOT NULL,
   `p_state` varchar(15) NOT NULL,
   `p_district` varchar(15) NOT NULL,
   `p_city` varchar(15) NOT NULL,

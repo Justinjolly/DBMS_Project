@@ -1,6 +1,6 @@
 <?php
 
-$connection=new mysqli("localhost","root","","sms_project");
+$connection=new mysqli("localhost","root","","project");
 
 if($_POST)
 
@@ -11,12 +11,18 @@ if($_POST)
     $count=mysqli_num_rows($selectquery);
     
     $row=mysqli_fetch_array($selectquery);
+    $password=isset($row['password']) ;
     
     if($count>0){
-     echo "Your password is: ";
-     echo $row['password'];
+      $message=("your password is ".$row['password']);
+      echo "<script type='text/javascript'>alert('$message');</script>"; 
     }
-    
+    else{
+      echo '<script type ="text/JavaScript">';  
+      echo 'alert("Invalid email")';  
+      echo '</script>';  
+  }
+  echo "<script> location.href='index.html'; </script>";
 }
 
 
