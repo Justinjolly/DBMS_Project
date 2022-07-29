@@ -25,7 +25,7 @@ else{
     $data_pe=$_POST['pe'];
     $data_dbms=$_POST['dbms'];
 
-    $sql="update `grades` set `graph_theory`='$data_gt',`operating_system`=''$data_os',`database_management_system`='$data_dbms',`computer_organization_and_architecture`='$data_coa',`professional_ethic`='$data_pe',`constitution_of_india`=''$data_coi' where adm_no='$data_admno' ";
+    $sql="update `grades` set `graph_theory`='$data_gt',`operating_system`='$data_os',`database_management_system`='$data_dbms',`computer_organization_and_architecture`='$data_coa',`professional_ethic`='$data_pe',`constitution_of_india`='$data_coi' where adm_no='$data_admno' ";
     $result=mysqli_query($data,$sql);
 
   
