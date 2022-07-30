@@ -13,34 +13,40 @@
             <form action="grades.php" method="POST">
     <h2>Grade</h2>
     <div class="form-item">
-        <label for="gt">Admission No :</label>
+        <label for="semester">Semester :</label>
+        <input type="text" name="semester" id="semester" required>
+    </div>
+    <div class="form-item">
+        <label for="admission">Admission No :</label>
         <input type="text" name="admission" id="admission" required>
     </div>
     <hr>
                 <div class="form-item">
-                    <label for="gt">Graph Theory :</label>
+                    <label for="subject">Subject :</label>
+                    <label for="grade">Grade :</label>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="subject_1" id="subject_1" required> 
                     <input type="text" name="gt" id="gt" required>
                 </div>
                 <div class="form-item">
-                    <label for="os">Operating System :</label>
+                    <input type="text" name="subject_2" id="subject_2" required> 
                     <input type="text" name="os" id="os" required>
                 </div>
                 <div class="form-item">
-                    <label for="dbms">Database Management System :</label>
+                    <input type="text" name="subject_3" id="subject_3" required> 
                     <input type="text" name="dbms" id="dbms" required>
                 </div>
-                <p></p>
                 <div class="form-item">
-                    <label for="coa">Computer Organization and Architecture :</label>
+                    <input type="text" name="subject_4" id="subject_4" required> 
                     <input type="text" name="coa" id="coa" required>
                 </div>
-                <p></p>
                 <div class="form-item">
-                    <label for="pe">Professional Ethic :</label>
+                    <input type="text" name="subject_5" id="subject_5" required> 
                     <input type="text" name="pe" id="pe" required> 
                 </div>
                 <div class="form-item">
-                    <label for="coi">Constitution of India :</label>
+                    <input type="text" name="subject_6" id="subject_6" required> 
                     <input type="text" name="coi" id="coi" required>
                 </div>
                 <button class="register" type="submit">Submit</button>
