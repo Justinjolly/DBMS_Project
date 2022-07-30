@@ -61,11 +61,15 @@ if($_POST)
     font-size: 20px;
     border: 2px solid black;
     border-bottom: none;
-    
 
 }
+     .background{
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
    </style>
-     <body>
+     <body background="images/SJCET_PALAI_College_Front_View.jpg" class="background">
           <center class="main">
          
           <div class="form_design"> 
