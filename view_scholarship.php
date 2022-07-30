@@ -28,7 +28,7 @@ echo '<table table class="table table-bordered table-hover  " border="1" cellspa
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Student name</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>course</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Admission No</font> </td> 
-          <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Scholarship amount</font> </td>
+          
       </tr>';
 
 if ($result = $mysqli->query($query)) {
@@ -38,7 +38,7 @@ if ($result = $mysqli->query($query)) {
         $field3name = $row["scholarship_student_name"];
         $field4name = $row["scholarship_student_course"];
         $field5name = $row["adm_no"]; 
-        $field6name = $row["scholarship"];
+    
 
         echo '<tr> 
                   <td>'.$field1name.'</td> 
@@ -46,7 +46,7 @@ if ($result = $mysqli->query($query)) {
                   <td>'.$field3name.'</td> 
                   <td>'.$field4name.'</td> 
                   <td>'.$field5name.'</td> 
-                  <td>'.$field6name.'</td> 
+                 
               </tr>';
     }
     $result->free();
