@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 28, 2022 at 06:02 PM
+-- Generation Time: Jul 30, 2022 at 09:52 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -29,13 +29,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `grades` (
   `grade_id` int(11) NOT NULL,
+  `semester` varchar(5) NOT NULL,
   `adm_no` varchar(10) NOT NULL,
-  `graph_theory` varchar(3) NOT NULL,
-  `operating_system` varchar(3) NOT NULL,
-  `database_management_system` varchar(3) NOT NULL,
-  `computer_organization_and_architecture` varchar(3) NOT NULL,
-  `professional_ethic` varchar(3) NOT NULL,
-  `constitution_of_india` int(3) NOT NULL
+  `subject1` varchar(3) NOT NULL,
+  `subject2` varchar(3) NOT NULL,
+  `subject3` varchar(3) NOT NULL,
+  `subject4` varchar(3) NOT NULL,
+  `subject5` varchar(3) NOT NULL,
+  `subject6` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -57,7 +58,7 @@ ALTER TABLE `grades`
 -- AUTO_INCREMENT for table `grades`
 --
 ALTER TABLE `grades`
-  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `grade_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
