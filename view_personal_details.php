@@ -1,3 +1,4 @@
+
 <html>
     <head>
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
@@ -34,40 +35,34 @@ echo '<table table class="table table-bordered table-hover  " border="1" cellspa
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Contact</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>City</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>District</font> </td>
+          <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Delete</font> </td>
       </tr>';
 
-if ($result = $mysqli->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["admissonNo"];
-        $field2name = $row["name"];
-        $field3name = $row["gender"];
-        $field4name = $row["dob"];
-        $field5name = $row["parentName"]; 
-        $field6name = $row["email"];
-        $field7name = $row["program"];
-        $field8name = $row["department"]; 
-        $field9name = $row["contact"];
-        $field10name = $row["p_city"];
-        $field11name = $row["p_district"]; 
-        
 
-        echo '<tr> 
-                  <td>'.$field1name.'</td> 
-                  <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td> 
-                  <td>'.$field5name.'</td> 
-                  <td>'.$field6name.'</td> 
-                  <td>'.$field7name.'</td> 
-                  <td>'.$field8name.'</td> 
-                  <td>'.$field9name.'</td> 
-                  <td>'.$field10name.'</td> 
-                  <td>'.$field11name.'</td>
-              </tr>';
-    }
-    $result->free();
-} 
+      $sel_query="Select * from registration;";
+      $result = mysqli_query($mysqli,$sel_query);
+      while($row = mysqli_fetch_assoc($result)) { ?>
+      <tr>
+      <td align="center"><?php echo $row["admissonNo"]; ?></td>
+      <td align="center"><?php echo $row["name"]; ?></td>
+      <td align="center"><?php echo $row["gender"]; ?></td>
+      <td align="center"><?php echo $row["dob"]; ?></td>
+      <td align="center"><?php echo $row["parentName"]; ?></td>
+      <td align="center"><?php echo $row["email"]; ?></td>
+      <td align="center"><?php echo $row["program"]; ?></td>
+      <td align="center"><?php echo $row["department"]; ?></td>
+      <td align="center"><?php echo $row["contact"]; ?></td>
+      <td align="center"><?php echo $row["p_city"]; ?></td>
+      <td align="center"><?php echo $row["p_district"]; ?></td>
+      <td align="center">
+      <a href="delete_student.php?id=<?php echo $row["admissonNo"]; ?>">Delete</a>
+      </td>
+      </tr>
+      <?php }
+
 ?>
   </center>
 </body>
 </html>
+
+
