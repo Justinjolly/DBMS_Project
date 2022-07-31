@@ -28,29 +28,25 @@ echo '<table table class="table table-bordered table-hover  " border="1" cellspa
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Student name</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>course</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Admission No</font> </td> 
+          <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Delete</font> </td>
           
       </tr>';
 
-if ($result = $mysqli->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["scholarship_id"];
-        $field2name = $row["scholarship_type"];
-        $field3name = $row["scholarship_student_name"];
-        $field4name = $row["scholarship_student_course"];
-        $field5name = $row["adm_no"]; 
-    
+      $sel_query="Select * from scholarships;";
+      $result = mysqli_query($mysqli,$sel_query);
+      while($row = mysqli_fetch_assoc($result)) { ?>
+      <tr>
+      <td align="center"><?php echo $row["scholarship_id"]; ?></td>
+      <td align="center"><?php echo $row["scholarship_type"]; ?></td>
+      <td align="center"><?php echo $row["scholarship_student_name"]; ?></td>
+      <td align="center"><?php echo $row["scholarship_student_course"]; ?></td>
+      <td align="center"><?php echo $row["adm_no"]; ?></td>
+      <td align="center">
+      <a href="delete_scholarship.php?id=<?php echo $row["scholarship_id"]; ?>">Delete</a>
+      </td>
+      </tr>
+      <?php }
 
-        echo '<tr> 
-                  <td>'.$field1name.'</td> 
-                  <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td> 
-                  <td>'.$field5name.'</td> 
-                 
-              </tr>';
-    }
-    $result->free();
-} 
 ?>
   </center>
 </body>
