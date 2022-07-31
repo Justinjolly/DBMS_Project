@@ -28,29 +28,30 @@ echo '<table table class="table table-bordered table-hover  " border="1" cellspa
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>adm_no</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>fee_amount</font> </td> 
           <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>department</font> </td> 
-          
+          <td bgcolor="#d63447"> <font color="white"><font face="Verdana" size=4>Delete</font> </td>
+
+
       </tr>';
 
-if ($result = $mysqli->query($query)) {
-    while ($row = $result->fetch_assoc()) {
-        $field1name = $row["fee_id"];
-        $field2name = $row["student_name"];
-        $field3name = $row["adm_no"];
-        $field4name = $row["fee_amount"];
-        $field5name = $row["department"]; 
 
-        echo '<tr> 
-                  <td>'.$field1name.'</td> 
-                  <td>'.$field2name.'</td> 
-                  <td>'.$field3name.'</td> 
-                  <td>'.$field4name.'</td> 
-                  <td>'.$field5name.'</td> 
-                   
-              </tr>';
-    }
-    $result->free();
-} 
+      $sel_query="Select * from fees;";
+      $result = mysqli_query($mysqli,$sel_query);
+      while($row = mysqli_fetch_assoc($result)) { ?>
+      <tr>
+      <td align="center"><?php echo $row["fee_id"]; ?></td>
+      <td align="center"><?php echo $row["student_name"]; ?></td>
+      <td align="center"><?php echo $row["adm_no"]; ?></td>
+      <td align="center"><?php echo $row["fee_amount"]; ?></td>
+      <td align="center"><?php echo $row["department"]; ?></td>
+      <td align="center">
+      <a href="delete_fees.php?id=<?php echo $row["fee_id"]; ?>">Delete</a>
+      </td>
+      </tr>
+      <?php }
+
 ?>
   </center>
 </body>
 </html>
+
+
