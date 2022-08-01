@@ -67,8 +67,8 @@ echo '<table table class="table table-bordered table-hover  " border="1" cellspa
       <td align="center"><?php echo $row["sub_4"]; ?></td>
       <td align="center"><?php echo $row["subject5"]; ?></td>
       <td align="center"><?php echo $row["sub_5"]; ?></td>
-      <td align="center"><?php echo $row["sub_6"]; ?></td>
       <td align="center"><?php echo $row["subject6"]; ?></td>
+      <td align="center"><?php echo $row["sub_6"]; ?></td>
       <td align="center">
       <a href="delete_grade.php?id=<?php echo $row["admissonNo"]; ?>" onclick="return checkDelete()">Delete</a>
       </td>
